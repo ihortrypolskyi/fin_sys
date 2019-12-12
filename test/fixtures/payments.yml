@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sum: 1.5
+  description: MyText
+  date: 2019-12-13
+  debtor: MyString
+  loan: 
+  state: 
+  paid_at: 2019-12-13 00:27:38
+
+two:
+  sum: 1.5
+  description: MyText
+  date: 2019-12-13
+  debtor: MyString
+  loan: 
+  state: 
+  paid_at: 2019-12-13 00:27:38

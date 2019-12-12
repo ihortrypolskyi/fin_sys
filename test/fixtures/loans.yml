@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sum: 1.5
+  percentage: 1
+  type: 
+  number_of_month: 1
+  static_return_value: 1.5
+  payed_sum: 1.5
+
+two:
+  sum: 1.5
+  percentage: 1
+  type: 
+  number_of_month: 1
+  static_return_value: 1.5
+  payed_sum: 1.5
