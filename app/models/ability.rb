@@ -21,13 +21,14 @@ class Ability
       can :read, Loan, lender_id: user.id
       can :manage, user
 
-   when 'debtor'
+    when 'debtor'
+      #TODO payment to ability
      can :access, :rails_admin
      #can :read, :all
      #can :manage, :all
      #can :manage, :dashboard
      #can :manage, Lender, :id => user.id
-     can :read, Loan, lender_id: user.id
+     can :read, Loan, debtor_id: user.id
      can :manage, user
      can :read, user.lenders
     else
