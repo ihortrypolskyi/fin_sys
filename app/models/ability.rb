@@ -4,41 +4,36 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :access, :rails_admin if user
+    can :access, :rails_admin
+    #can :manage, :all
+    can :manage, :dashboard
 
     case user.role
     when 'admin'
       #can :access, :rails_admin if user
-      can :read, :all
-      can :see, :all
       can :manage, :all
     when 'lender'
-      #can :access, :rails_admin if user
-      #can :see, :all
+      can :access, :rails_admin
       #can :read, :all
       #can :manage, :all
-      can :manage, :dashboard
-      can :read, Lender
-    when 'debtor'
+      #can :manage, :dashboard
+      #can :manage, Lender, :id => user.id
+      can :read, Loan, lender_id: user.id
+      can :manage, user
+
+   when 'debtor'
+     can :access, :rails_admin
+     #can :read, :all
+     #can :manage, :all
+     #can :manage, :dashboard
+     #can :manage, Lender, :id => user.id
+     can :read, Loan, lender_id: user.id
+     can :manage, user
+     can :read, user.lenders
     else
       cannot :manage, :all
+      can :manage, user
     end
-    #if user.role == 'admin'
-    #  #can :access, :rails_admin if user
-    #  can :read, :all
-    #  can :see, :all
-    #  can :manage, :all
-    ##can :manage, :all
-    #end
-    #
-    #if user.role == ''
-    #  #can :access, :rails_admin if user
-    #  #can :see, :all
-    #  #can :read, :all
-    #  #can :manage, :all
-    #  can :manage, :dashboard
-    #  can :read, Lender
-    #end
 
 
     # Define abilities for the passed in user here. For example:

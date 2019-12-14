@@ -15,21 +15,6 @@ ActiveRecord::Schema.define(version: 2019_12_14_100553) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admins", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "debtors", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "lenders", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "loans", force: :cascade do |t|
     t.float "sum", null: false
     t.integer "percentage"
@@ -38,12 +23,10 @@ ActiveRecord::Schema.define(version: 2019_12_14_100553) do
     t.float "static_return_value"
     t.float "pay_sum"
     t.float "paid_back_sum"
-    t.bigint "lender_id", null: false
-    t.bigint "debtor_id", null: false
+    t.integer "lender_id"
+    t.integer "debtor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["debtor_id"], name: "index_loans_on_debtor_id"
-    t.index ["lender_id"], name: "index_loans_on_lender_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -73,7 +56,5 @@ ActiveRecord::Schema.define(version: 2019_12_14_100553) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "loans", "debtors"
-  add_foreign_key "loans", "lenders"
   add_foreign_key "payments", "loans"
 end

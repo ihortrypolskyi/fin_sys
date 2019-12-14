@@ -8,9 +8,8 @@ class CreateLoans < ActiveRecord::Migration[6.0]
       t.float :static_return_value
       t.float :pay_sum
       t.float :paid_back_sum
-
-      t.references :lender, null: false, foreign_key: true
-      t.references :debtor, null: false, foreign_key: true
+      t.integer :lender_id
+      t.integer :debtor_id
 
       t.timestamps
     end

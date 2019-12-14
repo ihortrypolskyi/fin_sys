@@ -1,15 +1,18 @@
 RailsAdmin.config do |config|
 
-  ### Popular gems integration
+  ### Popular gems
+  #
+  # #TODO full name
+  RailsAdmin.config {|c| c. label_methods << 'first_name'}
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+   config.authenticate_with do
+     warden.authenticate! scope: :user
+   end
+   config.current_user_method(&:current_user)
 
   ## == CancanCan ==
-  # config.authorize_with :cancancan
+   config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -23,14 +26,26 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
   #
-  RailsAdmin.config do |config|
-    config.authenticate_with do
-      warden.authenticate! scope: :user
-    end
-    config.current_user_method(&:current_user)
-  end
+  #TODO exclude fields
+  #config.model 'User' do
+  #  #Reset password sent at
+  #  list do
+  #    field :name
+  #    field :created_at
+  #  end
+  #end
 
-  config.authorize_with :cancancan
+  #TODO values
+  #config.model 'Loan' do
+  #  list do
+  #    field :custom_column
+  #  end
+  #  #create do
+  #  #  field :custom_list
+  #  #end
+  #end
+  config.label_methods.unshift(:loan_name)
+
 
   config.actions do
     dashboard                     # mandatory
