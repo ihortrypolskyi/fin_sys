@@ -3,17 +3,15 @@
 one:
   sum: 1.5
   description: MyText
-  date: 2019-12-13
-  debtor: MyString
-  loan: 
-  state: 
-  paid_at: 2019-12-13 00:27:38
+  pay_until: 2019-12-14
+  state: 1
+  paid_at: 2019-12-14 12:05:53
+  loan: one
 
 two:
   sum: 1.5
   description: MyText
-  date: 2019-12-13
-  debtor: MyString
-  loan: 
-  state: 
-  paid_at: 2019-12-13 00:27:38
+  pay_until: 2019-12-14
+  state: 1
+  paid_at: 2019-12-14 12:05:53
+  loan: two
