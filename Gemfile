@@ -57,3 +57,5 @@ gem 'devise'
 gem 'rails_admin', '~> 2.0', git: 'https://github.com/sferik/rails_admin.git'
 gem 'cancancan'
 gem 'sidekiq'
+gem 'whenever', require: false
+gem "bootstrap_form", "~> 4.0"

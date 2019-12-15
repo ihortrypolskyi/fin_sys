@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+
+h1, h2 {
+    font-family: 'Lora', 'Times New Roman', serif;
+    text-align: center;
+}
+
+.form {
+    margin: auto;
+    width: 160px;
+}
+
+a {
+    display: none;
+}

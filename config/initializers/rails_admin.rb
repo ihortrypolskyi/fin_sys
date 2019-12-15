@@ -3,7 +3,7 @@ RailsAdmin.config do |config|
   ### Popular gems
   #
   # #TODO full name
-  RailsAdmin.config {|c| c. label_methods << 'first_name'}
+  RailsAdmin.config {|c| c. label_methods << 'full_name'}
 
   ## == Devise ==
    config.authenticate_with do
@@ -26,24 +26,55 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
   #
-  #TODO exclude fields / flash messages/ root page / payment calculation
-  #config.model 'User' do
-  #  #Reset password sent at
-  #  list do
-  #    field :name
-  #    field :created_at
-  #  end
-  #end
+  #TODO flash messages/ payment calculation / seed file
+  config.model 'User' do
+    list do
+      field :id
+      field :role
+      field :email
+      field :full_name
+      field :created_at
+    end
 
-  #TODO values
-  #config.model 'Loan' do
-  #  list do
-  #    field :custom_column
-  #  end
-  #  #create do
-  #  #  field :custom_list
-  #  #end
-  #end
+    create do
+      field :email
+      field :password
+      field :first_name
+      field :last_name
+      field :role
+    end
+
+    edit do
+      field :email
+      field :password
+      field :first_name
+      field :last_name
+      field :role
+    end
+
+    show do
+      exclude_fields :lenders, :debtors, :full_name
+    end
+  end
+
+  config.model 'Loan' do
+    list do
+      field :id
+      field :sum
+      field :percentage
+      field :lender_name
+      field :debtor_name
+      field :debtor_name
+      field :paid_back_sum
+    end
+  end
+
+  config.model 'Payment' do
+    list do
+      exclude_fields :description , :updated_at, :created_at
+    end
+  end
+
   #config.label_methods.unshift(:loan_name)
 
 

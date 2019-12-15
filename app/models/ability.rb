@@ -18,7 +18,8 @@ class Ability
       #can :manage, :all
       #can :manage, :dashboard
       #can :manage, Lender, :id => user.id
-      can :read, Loan, lender_id: user.id
+      can :read, Loan, lender_id: user
+      #can :read, Payment, loan.lender: user.id
       can :manage, user
 
     when 'debtor'
@@ -29,6 +30,7 @@ class Ability
      #can :manage, :dashboard
      #can :manage, Lender, :id => user.id
      can :read, Loan, debtor_id: user.id
+     #can :read, Payment, loan.debtor: user.id
      can :manage, user
      can :read, user.lenders
     else

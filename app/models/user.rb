@@ -11,4 +11,12 @@ class User < ApplicationRecord
   has_many :debtors, through: :debtor_loans
 
   validates :first_name, :last_name, :role, presence: true
+
+  after_create :create_full_name
+
+  private
+
+  def create_full_name
+    self.update!(full_name: "#{self.first_name} #{self.last_name}")
+  end
 end

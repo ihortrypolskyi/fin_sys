@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58c6d3bf-add6-40a3-8f74-c742e1e583ef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/workers/create_payment_worker.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fin_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fin_system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mailers/payment_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/payment_mailer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/ability.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ability.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/admin.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/debtor.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/lender.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/loan.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/loan.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/payment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/payment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.text.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.text.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/rails_admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/rails_admin.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +187,7 @@
       <workItem from="1576304726540" duration="20596000" />
       <workItem from="1576333904535" duration="21225000" />
       <workItem from="1576394252004" duration="18832000" />
+      <workItem from="1576421916865" duration="15950000" />
     </task>
     <servers />
   </component>
@@ -197,10 +202,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="420" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576400410568" />
-    <state x="626" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576182451584">
+    <state x="626" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576413832921">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="626" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1576182451584" />
+    <state x="626" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1576413832921" />
     <state x="695" y="240" key="FileChooserDialogImpl" timestamp="1576362007791">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -213,17 +218,21 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="100" y="95" width="1720" height="885" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1576310842533" />
-    <state x="530" y="206" width="860" height="662" key="find.popup" timestamp="1576410497046">
+    <state x="563" y="30" width="1357" height="661" key="dock-window-1" timestamp="1576432471418">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="530" y="206" width="860" height="662" key="find.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576410497046" />
+    <state x="563" y="30" width="1357" height="661" key="dock-window-1/0.30.1920.1050@0.30.1920.1050" timestamp="1576432471418" />
+    <state x="530" y="206" width="860" height="662" key="find.popup" timestamp="1576435271841">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="530" y="206" width="860" height="662" key="find.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576435271841" />
     <state x="540" y="241" width="840" height="1034" key="run.anything.popup" timestamp="1576343324432">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="540" y="241" width="840" height="1034" key="run.anything.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576343324432" />
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1576396832786">
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1576432938876">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576396832786" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576432938876" />
   </component>
 </project>

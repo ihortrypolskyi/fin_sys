@@ -1,8 +1,8 @@
 class PaymentMailer < ApplicationMailer
-  #def new_payment_email(payment)
-  def new_payment_email
+  def new_payment_email(payment)
+  #def new_payment_email
   #  @payment = payment
-    payment = Payment.last
+  #  payment = Payment.last
     @loan_sum = payment.loan.sum
     @lender_name = payment.loan.lender.first_name
     @loan_percentage = payment.loan.percentage

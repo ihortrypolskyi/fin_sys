@@ -8,13 +8,12 @@ class Loan < ApplicationRecord
 
   enum payback_type: [:monthly, :monthly_with_static_return  , :preferential]
 
-  def custom_column
-    self.lender.first_name
+  def lender_name
+    self.lender.full_name
   end
 
-  def loan_name
-    #TODO on loan create/edit
-    "#{self.sum}  #{self.lender.first_name} #{self.debtor.first_name} "
+  def debtor_name
+    self.debtor.full_name
   end
 
   private
