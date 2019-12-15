@@ -2,12 +2,14 @@ class Payment < ApplicationRecord
   belongs_to :loan
   enum state: [:pending, :paid]
 
-  def create_payment
-    @payment = Payment.new(order_params)
+  after_create :send_payment_email
 
-    if @payment.save
-      PaymentMailer.with(payment: @payment).new_payment_email.deliver_later
-    end
+  #TODO sender email
+
+  private
+
+  def send_payment_email
+     PaymentMailer.new_payment_email(self).deliver_later
   end
 
 end

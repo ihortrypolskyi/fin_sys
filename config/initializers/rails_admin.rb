@@ -26,7 +26,7 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
   #
-  #TODO exclude fields
+  #TODO exclude fields / flash messages/ root page / payment calculation
   #config.model 'User' do
   #  #Reset password sent at
   #  list do
@@ -44,7 +44,7 @@ RailsAdmin.config do |config|
   #  #  field :custom_list
   #  #end
   #end
-  config.label_methods.unshift(:loan_name)
+  #config.label_methods.unshift(:loan_name)
 
 
   config.actions do

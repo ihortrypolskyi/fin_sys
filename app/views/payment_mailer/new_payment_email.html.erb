@@ -4,19 +4,13 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-  <p>Here`s new payment for <%= @payment.sum %>$</p>
-<!--  <p>-->
-<!--    Order details<br>-->
-<!--    ---------------------------->
-<!--  </p>-->
-<!--  <p>Name: <%#= @order.name %></p>-->
-<!--  <p>Email: <%#= @order.email %></p>-->
-<!--  <p>Address: <%#= @order.address %></p>-->
-<!--  <p>Phone: <%#= @order.phone %></p>-->
-<!--  <p>-->
-<!--    Message:<br>-->
-<!--    ------------>
-<!--  </p>-->
-<!--  <p><%#= @order.message %></p>-->
+
+  <p>Here`s new payment for loan <%= @loan_sum %>$, lended by <%= @lender_name %></p>
+  <p>loan percentage <%= @loan_percentage %>%</p>
+  <p>static return value <%= @static_return_value %>$</p>
+
+  <p><b>payment sum <%= @payment_sum %>$</b></p>
+
+  <p>Please, pay off debt until <%= @pay_until %>.</p>
 </body>
 </html>

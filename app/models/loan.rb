@@ -3,6 +3,8 @@ class Loan < ApplicationRecord
   belongs_to :debtor, class_name: 'User'
   validates :lender_id, presence: true
   validates :debtor_id, presence: true
+  #TODO sums scale
+  after_create :create_loan_payment
 
   enum payback_type: [:monthly, :monthly_with_static_return  , :preferential]
 
@@ -11,6 +13,16 @@ class Loan < ApplicationRecord
   end
 
   def loan_name
+    #TODO on loan create/edit
     "#{self.sum}  #{self.lender.first_name} #{self.debtor.first_name} "
+  end
+
+  private
+
+  def create_loan_payment
+    sum = self.sum + (self.sum * 0.1 * self.percentage  )
+    pay_until = self.created_at.to_date + 1.month
+
+    CreatePaymentWorker.perform_async(sum, pay_until, self.id)
   end
 end
