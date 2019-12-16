@@ -4,38 +4,25 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :access, :rails_admin
-    #can :manage, :all
-    can :manage, :dashboard
-
     case user.role
     when 'admin'
-      #can :access, :rails_admin if user
+      can :access, :rails_admin
+      can :manage, :dashboard
       can :manage, :all
     when 'lender'
       can :access, :rails_admin
-      #can :read, :all
-      #can :manage, :all
-      #can :manage, :dashboard
-      #can :manage, Lender, :id => user.id
-      can :read, Loan, lender_id: user
-      #can :read, Payment, loan.lender: user.id
-      can :manage, user
-
+      can :manage, :dashboard
+      can :read, Loan, lender_id: user.id
+      can :read, Payment, loan: {id: user.lender_loans.map{|l| l.id}.flatten.uniq}
+      can [:read, :show, :update], User, id: user.id
     when 'debtor'
-      #TODO payment to ability
-     can :access, :rails_admin
-     #can :read, :all
-     #can :manage, :all
-     #can :manage, :dashboard
-     #can :manage, Lender, :id => user.id
-     can :read, Loan, debtor_id: user.id
-     #can :read, Payment, loan.debtor: user.id
-     can :manage, user
-     can :read, user.lenders
+      can :access, :rails_admin
+      can :manage, :dashboard
+      can :read, Loan, debtor_id: user.id
+      can :read, Payment, loan: {id: user.debtor_loans.map{|l| l.id}.flatten.uniq}
+      can [:read, :show, :update], User, id: user.id
     else
-      cannot :manage, :all
-      can :manage, user
+      cannot :access, :rails_admin
     end
 
 

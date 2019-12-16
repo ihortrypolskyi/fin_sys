@@ -47,9 +47,13 @@ RailsAdmin.config do |config|
     edit do
       field :email
       field :password
-      field :first_name
-      field :last_name
-      field :role
+
+      include_fields :first_name, :last_name, :role do
+        read_only do
+          bindings[:object].role != 'admin'
+        end
+      end
+
     end
 
     show do
@@ -67,6 +71,52 @@ RailsAdmin.config do |config|
       field :debtor_name
       field :paid_back_sum
     end
+
+    create do
+      include_all_fields
+      exclude_fields :lender, :debtor
+
+      field :lender do
+        associated_collection_cache_all false
+        associated_collection_scope do
+        Proc.new { |scope|
+          scope.where(role: 'lender')
+        }
+        end
+      end
+
+      field :debtor do
+        associated_collection_cache_all false
+        associated_collection_scope do
+          Proc.new { |scope|
+            scope.where(role: 'debtor')
+          }
+        end
+      end
+    end
+
+    edit do
+      include_all_fields
+      exclude_fields :lender, :debtor
+
+      field :lender do
+        associated_collection_cache_all false
+        associated_collection_scope do
+          Proc.new { |scope|
+            scope.where(role: 'lender')
+          }
+        end
+      end
+
+      field :debtor do
+        associated_collection_cache_all false
+        associated_collection_scope do
+          Proc.new { |scope|
+            scope.where(role: 'debtor')
+          }
+        end
+      end
+    end
   end
 
   config.model 'Payment' do
@@ -74,9 +124,6 @@ RailsAdmin.config do |config|
       exclude_fields :description , :updated_at, :created_at
     end
   end
-
-  #config.label_methods.unshift(:loan_name)
-
 
   config.actions do
     dashboard                     # mandatory

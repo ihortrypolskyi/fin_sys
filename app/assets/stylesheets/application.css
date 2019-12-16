@@ -25,6 +25,6 @@ h1, h2 {
     width: 160px;
 }
 
-a {
-    display: none;
+body {
+    background-image: url("home-bg.jpg");
 }
