@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="58c6d3bf-add6-40a3-8f74-c742e1e583ef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/payment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/payment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.text.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.text.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +172,8 @@
       <workItem from="1576394252004" duration="18832000" />
       <workItem from="1576421916865" duration="15950000" />
       <workItem from="1576528368845" duration="10369000" />
-      <workItem from="1576613007327" duration="13192000" />
+      <workItem from="1576613007327" duration="14168000" />
+      <workItem from="1576664562287" duration="1159000" />
     </task>
     <servers />
   </component>
@@ -221,9 +216,9 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="540" y="241" width="840" height="1034" key="run.anything.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576343324432" />
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1576615010974">
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1576627169000">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576615010974" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1576627169000" />
   </component>
 </project>
