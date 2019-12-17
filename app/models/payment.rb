@@ -5,8 +5,11 @@ class Payment < ApplicationRecord
   private
 
   def self.send_payment_emails
-    Payment.where(created_at: 24.hours.ago..Time.now) do |payment|
-      PaymentMailer.new_payment_email(payment).deliver_later
-    end
+    payment = Payment.last
+    puts "BEGIN"
+    #Payment.where(created_at: 24.hours.ago..Time.now) do |payment|
+      PaymentMailer.new_payment_email(payment).deliver_now
+    #end
+     puts "DONE"
   end
 end
