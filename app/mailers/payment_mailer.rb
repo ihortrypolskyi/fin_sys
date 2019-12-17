@@ -10,7 +10,7 @@ class PaymentMailer < ApplicationMailer
     @pay_until = payment.pay_until
     @static_return_value =  payment.loan.static_return_value
 
-    #TODO add debtor_email to payment
+
     @debtor_email = payment.loan.debtor.email
     mail(to: "#{@debtor_email}", subject: "New payment created")
   end

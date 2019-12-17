@@ -4,13 +4,9 @@ class Payment < ApplicationRecord
 
   private
 
-  def self.check_payment_email_to_send
-
+  def self.send_payment_emails
+    Payment.where(created_at: 24.hours.ago..Time.now) do |payment|
+      PaymentMailer.new_payment_email(payment).deliver_later
+    end
   end
-
-  def self.send_payment_email
-     PaymentMailer.new_payment_email(self).deliver_later
-    #Payment.last.update!(sum: 2)
-  end
-
 end

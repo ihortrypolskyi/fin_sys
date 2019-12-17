@@ -20,6 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 
 job_type :runner,  "cd :path  && /bin/bash --login && rvm use 2.6.3 && bin/rails runner -e :environment ':task' :output"
-every 1.minutes, :roles => [:app] do
-  runner "Payment.send_payment_email", :environment => 'development', :output => 'log/cron_update.log'
+every 1.day, at: '2am', :roles => [:app] do
+  runner "Payment.send_payment_emails", :environment => 'development', :output => 'log/cron_update.log'
 end
