@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58c6d3bf-add6-40a3-8f74-c742e1e583ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-    </list>
+    <list default="true" id="58c6d3bf-add6-40a3-8f74-c742e1e583ef" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +170,7 @@
       <workItem from="1576394252004" duration="18832000" />
       <workItem from="1576421916865" duration="15950000" />
       <workItem from="1576528368845" duration="10369000" />
-      <workItem from="1576613007327" duration="7442000" />
+      <workItem from="1576613007327" duration="7799000" />
     </task>
     <servers />
   </component>
