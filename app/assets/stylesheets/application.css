@@ -26,5 +26,5 @@ h1, h2 {
 }
 
 body {
-    background-image: url("home-bg.jpg");
+    background-image: url("https://this-one.s3.eu-central-1.amazonaws.com/ef2fco1xmozyebtpxkaiq2x5wv45?response-content-disposition=inline%3B%20filename%3D%22home-bg.jpg%22%3B%20filename%2A%3DUTF-8%27%27home-bg.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAI5NTAMXHFRSLUUMA%2F20191217%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20191217T165652Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f305faa717302cbd04dc691211e29707505b1fff8b56753c2de0698521a8a877");
 }

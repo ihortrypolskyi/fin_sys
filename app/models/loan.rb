@@ -3,9 +3,6 @@ class Loan < ApplicationRecord
   belongs_to :debtor, class_name: 'User'
   has_many :payments
 
-  #
-  # validates :lender_id, presence: true
-  # validates :debtor_id, presence: true
   validates_presence_of :sum, :payback_type, :percentage, :number_of_months
   validates_numericality_of :sum, :number_of_months, :percentage, :greater_than => 0
   validates_numericality_of :paid_back_sum, :greater_than => 0, :allow_nil => true
