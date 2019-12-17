@@ -40,7 +40,7 @@ class Loan < ApplicationRecord
     months_to_go = self.number_of_months
     pay_until = self.created_at
     current_debt = sum_to_go + (sum_to_go * 0.01 * percentage)
-    monthly_sum_to_pay = current_debt/number_of_months
+    monthly_sum_to_pay = (current_debt/number_of_months).round(2)
 
     case self.payback_type
     when 'monthly'
@@ -49,7 +49,7 @@ class Loan < ApplicationRecord
       i = 0
       while i < number_of_months do
         current_debt = sum_to_go + (sum_to_go * 0.01 * percentage)
-        monthly_sum_to_pay = current_debt/months_to_go
+        monthly_sum_to_pay = (current_debt/number_of_months).round(2)
         months_to_go -= 1
         sum_to_go = current_debt - monthly_sum_to_pay
         pay_until = pay_until + 2.months
@@ -60,7 +60,6 @@ class Loan < ApplicationRecord
       
     when 'monthly_with_static_return'
       loan_id = self.id
-
 
       i = 0
       while i < number_of_months do
