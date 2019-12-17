@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="58c6d3bf-add6-40a3-8f74-c742e1e583ef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/payment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/payment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.text.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/payment_mailer/new_payment_email.text.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +178,7 @@
       <workItem from="1576394252004" duration="18832000" />
       <workItem from="1576421916865" duration="15950000" />
       <workItem from="1576528368845" duration="10369000" />
-      <workItem from="1576613007327" duration="11548000" />
+      <workItem from="1576613007327" duration="13192000" />
     </task>
     <servers />
   </component>
