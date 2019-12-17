@@ -14,7 +14,6 @@ class User < ApplicationRecord
   before_save :create_full_name, if: ->(u) {u.first_name_changed? || u.last_name_changed?}
 
 
-
   private
 
   def create_full_name

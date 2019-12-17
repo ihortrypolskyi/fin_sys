@@ -9,6 +9,7 @@ class Ability
       can :access, :rails_admin
       can :manage, :dashboard
       can :manage, :all
+      cannot :create, Payment
     when 'lender'
       can :access, :rails_admin
       can :manage, :dashboard

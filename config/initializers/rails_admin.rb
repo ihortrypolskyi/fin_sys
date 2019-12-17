@@ -74,7 +74,7 @@ RailsAdmin.config do |config|
 
     create do
       include_all_fields
-      exclude_fields :lender, :debtor, :payments
+      exclude_fields :lender, :debtor, :payments, :static_return_value, :pay_sum
 
       field :lender do
         associated_collection_cache_all false
@@ -97,7 +97,7 @@ RailsAdmin.config do |config|
 
     edit do
       include_all_fields
-      exclude_fields :lender, :debtor, :payments
+      exclude_fields :lender, :debtor, :payments, :static_return_value, :pay_sum
 
       field :lender do
         associated_collection_cache_all false
