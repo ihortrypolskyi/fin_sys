@@ -56,5 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'rails_admin', '~> 2.0', git: 'https://github.com/sferik/rails_admin.git'
 gem 'cancancan'
-gem 'sidekiq', '5.2.7'
+gem 'sidekiq', '6.4.0'
 gem 'whenever', require: false
